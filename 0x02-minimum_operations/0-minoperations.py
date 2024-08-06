@@ -17,9 +17,13 @@ def minOperations(n):
     divisor = 2
 
     while n > 1:
+        # Check if the current divisor is a factor of n
         while n % divisor == 0:
+            # Add the divisor to operations
             operations += divisor
+            # Divide n by the divisor
             n //= divisor
+        # Move to the next potential factor
         divisor += 1
 
     return operations
