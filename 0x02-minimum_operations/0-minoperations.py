@@ -10,20 +10,20 @@ def minOperations(n):
     :param n: Target number of characters
     :return: Minimum number of operations or 0 if n is impossible to achieve
     """
-    if n < 2:
+    if n <= 1:
         return 0
 
-    ops, root = 0, 2
+    operations = 0
+    divisor = 2
 
-    while root <= n:
-        # If n evenly divides by root
-        if n % root == 0:
-            # Total even-divisions by root = total operations
-            ops += root
-            # Set n to the remainder (integer division)
-            n //= root
-        else:
-            # Increment root to find next potential factor
-            root += 1
+    while n > 1:
+        # Check if the current divisor is a factor of n
+        while n % divisor == 0:
+            # Add the divisor to operations
+            operations += divisor
+            # Divide n by the divisor
+            n //= divisor
+        # Move to the next potential factor
+        divisor += 1
 
-    return ops
+    return operations
