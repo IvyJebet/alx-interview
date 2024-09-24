@@ -3,8 +3,8 @@
 ## Description
 This project involves creating a Python function to calculate the perimeter of an island in a grid. The grid is represented as a 2D list of integers, where:
 
-0 represents water
-1 represents land
+- 0 represents water
+- 1 represents land
 The goal is to calculate the perimeter of the landmass (island) by analyzing the grid and determining the edges that contribute to the total perimeter.
 
 ## Learning Objectives
